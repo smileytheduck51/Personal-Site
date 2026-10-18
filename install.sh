@@ -25,10 +25,17 @@ git clone https://github.com/smileytheduck51/Personal-Site
 #
 # TO FIX
 # /var/www permissions?? Is this True?
+# some kind of bot blocker (cloudflare?)
 # add /resume to the site (in Caddyfile)
 # caddy always auto starts/restarts
 # rice systemd caddy unit file
-# the actual html site dummy
+#
+# the actual html site dummy:
+#   make everything adaptible to device width
+#   put everything in center of screen
+#   change colors
+#   add margins
+#   sidebar? (projects showcase)
 #
 
 systemctl restart caddy.service

@@ -13,8 +13,8 @@ just in case anyone wanted to host my website for me :)
 
 # Installation
 
-Make sure ports 80 and 443 egress somethig
-Security Rules for instance's vnc, ports 443 & 80
+In Oracle's Cloud dashboard, under security rules for your instance's VCN, make sure
+Ingress rules allow Destination Ports 80 & 443 to have all incoming Source Port traffic
 
 curl -fsSL https://github.com/smileytheduck51/Personal-Site/install.sh | sh
 
