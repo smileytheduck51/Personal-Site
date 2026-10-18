@@ -5,3 +5,18 @@ Maybe I'll use a fancy JS framework in the future, after
 2. making my arch linux setup more aesthetic
 3. world domination
 
+# Tech Stack I Used
+- Oracle Always Free Tier VPS
+- Ubuntu Minimal 26.04 (would've used debian but cant with the always free tier)
+So, I tested my little install script from a fresh install using these, but I can't say anything else works
+just in case anyone wanted to host my website for me :)
+
+# Installation
+
+Make sure ports 80 and 443 egress somethig
+Security Rules for instance's vnc, ports 443 & 80
+
+curl -fsSL https://github.com/smileytheduck51/Personal-Site/install.sh | sh
+
+That's it. I really wanted to do a one command install because Oracle has been known to randomly revoke access to their Free VPS instances. I figured documenting everything in an install.sh was cooler and less work than creating a backup with rsync.
+
