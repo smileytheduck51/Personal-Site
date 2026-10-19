@@ -1,0 +1,4 @@
+calebgx.com {
+    root * /var/www/Personal-Site
+    file_server
+}
