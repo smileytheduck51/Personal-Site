@@ -1,4 +1,9 @@
 calebgx.com {
     root * /var/www/Personal-Site
     file_server
+
+    handle_path /resume* {
+        try_files /var/www/Personal-Site/assets/resume.pdf
+        file_server
+    }
 }

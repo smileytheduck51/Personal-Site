@@ -11,31 +11,43 @@ then
     sudo -s
 fi
 
-apt-get update && apt-get upgrade -y
+apt-get update -y
+apt-get upgrade -y
 apt-get install $packages -y
-
 timedatectl set-timezone America/New_York
+
+sed -i '16i\
+-A INPUT -p tcp -m state --state NEW -m tcp --dport 80 -j ACCEPT
+16i\
+-A INPUT -p tcp -m state --state NEW -m tcp --dport 443 -j ACCEPT
+' /etc/iptables/rules.v4
 
 mkdir /var/www
 cd /var/www
 git clone https://github.com/smileytheduck51/Personal-Site
 
-# /etc/iptables/rules.v4 sed modify
-#
+rm /etc/caddy/Caddyfile
+ln -s /var/www/Personal-Site/server/Caddyfile /etc/caddy/Caddyfile
+
 # TO FIX
-# some kind of bot blocker (cloudflare?)
-# add /resume to the site (in Caddyfile)
-# Caddyfile to github, symlink /etc/caddy/Caddyfile to git clone dir
+# add public /resume to the site (in Caddyfile)
 # caddy always auto starts/restarts
 # rice systemd caddy unit file?
+#
+# test this actual install/maintenance script
+#
+# add contact info
 #
 # the actual html site dummy:
 #   make everything adaptible to device width
 #   put everything in center of screen
 #   change colors
 #   add margins
-#   sidebar? (projects showcase)
+#   extra links at top
+#       resume
+#       projects
 #
+# analytic tools
 
 systemctl restart caddy.service
 
