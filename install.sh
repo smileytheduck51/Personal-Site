@@ -20,15 +20,14 @@ mkdir /var/www
 cd /var/www
 git clone https://github.com/smileytheduck51/Personal-Site
 
-# Caddyfile to github, move to /etc/caddy/Caddyfile upon install
 # /etc/iptables/rules.v4 sed modify
 #
 # TO FIX
-# /var/www permissions?? Is this True?
 # some kind of bot blocker (cloudflare?)
 # add /resume to the site (in Caddyfile)
+# Caddyfile to github, symlink /etc/caddy/Caddyfile to git clone dir
 # caddy always auto starts/restarts
-# rice systemd caddy unit file
+# rice systemd caddy unit file?
 #
 # the actual html site dummy:
 #   make everything adaptible to device width
