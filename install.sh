@@ -29,14 +29,8 @@ git clone https://github.com/smileytheduck51/Personal-Site
 rm /etc/caddy/Caddyfile
 ln -s /var/www/Personal-Site/server/Caddyfile /etc/caddy/Caddyfile
 
-# TO FIX
-# add public /resume to the site (in Caddyfile)
-# caddy always auto starts/restarts
-# rice systemd caddy unit file?
-#
+# fix this install script (bc ik it's broken lol)
 # test this actual install/maintenance script
-#
-# add contact info
 #
 # the actual html site dummy:
 #   make everything adaptible to device width
@@ -44,8 +38,7 @@ ln -s /var/www/Personal-Site/server/Caddyfile /etc/caddy/Caddyfile
 #   change colors
 #   add margins
 #   extra links at top
-#       resume
-#       projects
+#   add obfuscated contact info
 #
 # analytic tools
 
